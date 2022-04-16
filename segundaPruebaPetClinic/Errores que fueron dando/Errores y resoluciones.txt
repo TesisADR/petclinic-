@@ -1,0 +1,23 @@
+javax.servlet.ServletException: org.apache.wicket.WicketRuntimeException: Unable to create application of class domainapp.webapp.HelloWorldApplication
+
+
+: Unable to provision, see the following errors:
+
+1) Error in custom provider, org.apache.isis.core.commons.factory.UnavailableClassException: The class 'domainapp.application.HelloWorldAppManifest' cannot be found
+  at org.apache.isis.core.runtime.runner.IsisInjectModule.provideIsisSessionFactory(IsisInjectModule.java:109)
+  at org.apache.isis.core.runtime.runner.IsisInjectModule.provideIsisSessionFactory(IsisInjectModule.java:109)
+  while locating org.apache.isis.core.runtime.system.session.IsisSessionFactory
+    for field at org.apache.isis.viewer.wicket.viewer.IsisWicketApplication.isisSessionFactory(IsisWicketApplication.java:155)
+  while locating domainapp.webapp.PetClinicApplication
+
+1 error
+
+
+
+
+ese error lo solucioné metiendo mano en el isis.properties... corrigiendole
+la linea q estaba mal, la de 
+isis.appManifest=domainapp.application.PetClinicAppManifest
+
+
+anes decia application.HelloWorldAppManifest

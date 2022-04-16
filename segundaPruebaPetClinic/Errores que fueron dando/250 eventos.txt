@@ -1,0 +1,32 @@
+en clase pet se puso esto 
+
+
+@DomainObject(
+    auditing = Auditing.ENABLED,
+    removingLifecycleEvent = Pet.RemovingEvent.class            
+)
+...
+public class Pet implements Comparable<Pet> {
+ 
+
+
+antes teniua esto
+*******************************
+@DomainObject(auditing = Auditing.ENABLED)
+@DomainObjectLayout()  // causes UI events to be triggered
+public class Pet implements Comparable<Pet> {
+
+
+
+en la clase Pet tuve que cambiar estos imports: 
+
+import org.apache.isis.applib.services.clock.ClockService;
+import org.apache.isis.applib.services.repository.RepositoryService;
+
+por este 
+import org.apache.isis.applib.services.eventbus.ObjectRemovingEvent;
+
+
+
+y agregué este metodo
+public static class RemovingEvent extends ObjectRemovingEvent<Pet> {} 

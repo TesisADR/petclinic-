@@ -1,0 +1,3 @@
+ademas de tocar el dashboard toque por preimera vez un css
+
+en webapp/css/application.css

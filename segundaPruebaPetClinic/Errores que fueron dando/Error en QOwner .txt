@@ -1,0 +1,21 @@
+import java.util.SortedSet;
+
+	
+
+import java.util.TreeSet; 
+
+import javax.jdo.annotations.Persistent; 
+import org.apache.isis.applib.annotation.Collection; 
+
+
+
+
+Me faltaba importar esas librerias en la clase Owner 
+
+y el error que me tiraba era que faltaba identifier en la clase QOwner, me 
+decía que esperaba un "(" o ";" como si fuese un error de compilacion 
+y cuando iba al directorio target/dom/impl/QOwner en la linea 35 
+me tiraba un metodo con la sigla <<any>> cuando no debería ser asi 
+como si no me reconociera el tipo de la propiedad 
+y eso se debe posiblemente a que no estaba importado el persistent 
+

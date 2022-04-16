@@ -1,0 +1,52 @@
+En la clase Pet eliminé estos codigos en la parte de abjo de todo 
+
+
+    @javax.jdo.annotations.NotPersistent
+    @javax.inject.Inject
+    RepositoryService repositoryService;
+
+    @javax.jdo.annotations.NotPersistent
+    @javax.inject.Inject
+    ClockService clockService;
+
+
+en clase Pet eliminé estos imports tambien 
+
+import org.joda.time.LocalDateTime;
+import org.apache.isis.applib.annotation.Action;
+import org.apache.isis.applib.annotation.Parameter;
+import org.apache.isis.applib.annotation.ParameterLayout;
+import org.apache.isis.applib.annotation.SemanticsOf;
+
+
+
+y estos metodos 
+
+
+@Action(semantics = SemanticsOf.NON_IDEMPOTENT)
+    public Visit bookVisit(
+            final LocalDateTime at,
+            @Parameter(maxLength = 4000)
+            @ParameterLayout(multiLine = 5)
+            final String reason) {
+        return repositoryService.persist(new Visit(this, at, reason));
+    }
+
+
+    public LocalDateTime default0BookVisit() {
+        return clockService.now()
+                .plusDays(1)
+                .toDateTimeAtStartOfDay()
+                .toLocalDateTime()
+                .plusHours(9);
+    }
+
+    public String validate0BookVisit(final LocalDateTime proposed) {
+        return proposed.isBefore(clockService.nowAsLocalDateTime())
+                ? "Flaco no se puede elegir un dia en el pasado, sos tarado?"
+                : null;
+    }
+
+******este ultimo lo elimine pq ya estaba puesto en la clase de book visits 
+el resto seguramente tambien, no los he checkeado pero tienen sentido 
+xq son bookVisits

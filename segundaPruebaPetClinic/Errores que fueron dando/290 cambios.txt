@@ -1,0 +1,27 @@
+Cree la clase PetClinicModuleIntegTestAbstract
+
+y modifique la clase Pet_bookVisit_IntegTest
+los imports y quite alcgunos metodos
+
+y la public class tambien 
+public class Pet_bookVisit_IntegTest extends PetClinicModuleIntegTestAbstract {
+
+antes tenia otro nombre 
+
+**********************TIRA ERROR CUANDO LE DOY EL FIXTURE DE RECREATE OWNERS
+
+ org.apache.wicket.WicketRuntimeException
+Method onRequest of interface org.apache.wicket.behavior.IBehaviorListener targeted at org.apache.wicket.ajax.markup.html.form.AjaxButton$1@70328714 on component [IndicatingAjaxButton [Component id = okButton]] threw an exception
+org.apache.wicket.RequestListenerInterface#internalInvoke(RequestListenerInterface.java:268)
+org.apache.wicket.RequestListenerInterface#invoke(RequestListenerInterface.java:241)
+org.apache.wicket.core.request.handler.ListenerInterfaceRequestHandler#invokeListener(ListenerInterfaceRequestHandler.java:248)
+org.apache.wicket.core.request.handler.ListenerInterfaceRequestHandler#respond(ListenerInterfaceRequestHandler.java:234)
+org.apache.wicket.request.cycle.RequestCycle$HandlerExec
+
+
+DETALLE::: cuando lo ejecuto de una sin cambios no me tiró la excepcion
+
+igualmente al principio me tiro error pero actualice de vuelta la pagina 
+y me logró cargar los recreateOwners
+asi q ni idea 
+

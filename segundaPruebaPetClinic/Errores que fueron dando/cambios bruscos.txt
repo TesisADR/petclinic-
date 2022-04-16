@@ -1,0 +1,6 @@
+Cambié la app de owner.layout.xml, antes tenia la misma q puse en 
+la primer prueba de petclinic 
+
+asi que copié y pegué la que usaba el isis-petclinic-tutorial
+
+Analizo si podría tirar errores luego 

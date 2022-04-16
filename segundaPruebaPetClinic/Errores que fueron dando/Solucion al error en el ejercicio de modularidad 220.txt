@@ -1,0 +1,11 @@
+La mayoria de los errores que producian el error de la excepcion de 
+DataNucleus eran problemas de importaciones 
+
+el cambio más bruzco que realicé fue el de cambiar la clase de owner.layout.xml que antes estaba de otra forma, la misma forma a como lo tengo en la primer prueba de petclinic 
+
+los cambios de importacion fueron realizados en los siguientes paquetes,
+*ademas de todos los que pedia el ejercicio siendo owner, owners,pets y visits
+
+*PetClinicAppManifest.java   ->  import domain.dom.PetClinicModule  =   se cambio por .modules.PectClinic
+
+*PetClinicModule  ->  package domainapp.dom  =  se cambio por .modules

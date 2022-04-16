@@ -1,0 +1,7 @@
+
+
+El isis-non-changing.propertiesEl archivo incluye esta configuración:
+
+isis.objects.editing=false
+
+Esto significa que las propiedades no son editables por defecto, una buena convención porque en la mayoría de los casos querremos usar acciones para cambiar el estado del sistema.

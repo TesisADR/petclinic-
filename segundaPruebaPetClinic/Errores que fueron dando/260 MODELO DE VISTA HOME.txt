@@ -1,0 +1,9 @@
+se agregó nuevo paquete en modules/impl  --> /dashboard
+
+Dashboard.java
+Dashboard.layout.xml
+HomePageProvider.java
+
+
+una vez q los creé no tuve q tocar codigo en ningun lado ni realizar 
+ningun import, me lo logró compilar solo 
